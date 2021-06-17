@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Car Wash API</title>
+<style>
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0.5rem;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2rem
+}
+
+h3 {
+	font-size: 1.75rem
+}
+
+h4 {
+	font-size: 1.5rem
+}
+
+h5 {
+	font-size: 1.25rem
+}
+
+h6 {
+	font-size: 1rem
+}
+
+.lead {
+	font-weight: 300;
+	font-size: 2rem;
+}
+
+.banner {
+	font-size: 2.7rem;
+	margin: 0;
+	padding: 2rem 1rem;
+	background-color: rgb(39, 139, 151);
+	color: white;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, system-ui, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+code {
+	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+		"Courier New", monospace;
+	font-size: 87.5%;
+	color: #e83e8c;
+	word-break: break-word;
+}
+
+.left-column {
+	padding: .75rem;
+	max-width: 75%;
+	min-width: 55%;
+}
+
+.right-column {
+	padding: .75rem;
+	max-width: 25%;
+}
+
+.container {
+	display: flex;
+	width: 100%;
+}
+
+li {
+	margin: 0.75rem;
+}
+
+.right-section {
+	margin-left: 1rem;
+	padding-left: 0.5rem;
+}
+
+.right-section h3 {
+	padding-top: 0;
+	font-weight: 200;
+}
+
+.right-section ul {
+	border-left: 0.3rem solid #00A1E2;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.p-2 {
+	padding: .5rem !important;
+}
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+
+img {
+	vertical-align: middle;
+	border-style: none;
+}
+
+ol li {
+	list-style-type: none;
+}
+
+div.lista-doc {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-right: 150px;
+	margin-left: 80px;
+}
+</style>
+</head>
+<body>
+	<div>
+		<div class="banner lead">
+			<img src="imagens/logo60.jpg" alt="Car Wash logo" class="img-fluid p-2 ">API
+			de Mobil
+		</div>
+		<div class="lista-doc">
+			<h1>Bem vindo a CarWash API</h1>
+			<p>veja a baixo todas as nossas APIs diponíveis</p>
+			<ol>
+				<li>Cliente: "/cliente".</li>
+				<li><ol>
+					<li>GET -> Object "/{idDoCliente}"</li>
+					<li>GET -> List
+						<ol>
+							<li>Filtro:</li>
+							<li>cliente="codigo do cliente"</li>
+							<li>nome="nome do cliente"</li>
+							<li>cpf="CPF do cliente"</li>
+						</ol>
+					</li>
+					<li>POST -> body
+						<ol>
+							<li><code> { "nome":"nome completo",
+								"email":"exemplo@exemplo.com","senha":"senha
+								forte","cpf":"XXXXXXXXXXX ou
+								XXX.XXX.XXX-XX","dataNacimento":"dataISO"} </code></li>
+						</ol>
+					</li>
+					<li>DELETE -> "/{idCliente}"</li>
+				</ol></li>
+				<li>Lava Jato: "/lavajato"</li>
+				<li>
+				<ol>
+					<li>GET "/{idDaLoja}"</li>
+					<li>GET -> List
+						<ol>
+							<li>Filtro:</li>
+							<li>cnpj="CNPF da loja"</li>
+							<li>nome="nome do lava-jato"</li>
+							<li>email="email da loja"</li>
+							<li>loja="email da loja"</li>
+						</ol>
+					</li>
+					<li>POST -> body
+						<ol>
+							<li><code> { "nomeLoja":"nome do lavajato",
+								"cnpj":"XXXXXXXXXXXXXX ou XX.XXX.XXX/XXXX-XX",
+								"email":"exemplo@exemplo.com" } </code></li>
+						</ol>
+					</li>
+				</ol></li>
+				<li>Agendamento: "/agendamento"</li>
+				<li>
+				<ol>
+					<li>GET "/{idAgendamento}"</li>
+					<li>GET -> List
+						<ol>
+							<li>Filtro:</li>
+							<li>agendamento="id do agendamento"</li>
+							<li>inicio="Data hora de inicio agendamento"</li>
+							<li>fim="Data hora de inicio agendamento"</li>
+							<li>cliente="id do cliente*"</li>
+						</ol>
+					</li>
+					<li>POST -> body
+						<ol>
+							<li><code> { "idCliente":"idCliente",
+								"idLavaJato":"idLavaJato", "agendamento":{ "year": 2021,
+								"month": "JUNE", "monthValue": 6, "dayOfMonth": 9, "chronology":
+								{ "id": "ISO", "calendarType": "iso8601" }, "dayOfWeek":
+								"THURSDAY", "leapYear": false, "dayOfYear": 154, "era": "CE" } }
+							</code></li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+			</ol>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="d5k1h6doli00sp">
+		<class>br.com.carwash.entity.Cliente</class>
+		<class>br.com.carwash.entity.Loja</class>
+		<class>br.com.carwash.entity.Agendamento</class>
+		<class>br.com.carwash.entity.Produto</class>
+		<properties>
+
+			<!-- LOCALHOST MYSQL -->
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:postgres://quphvnaquwmblk:cf60cafaf6d688c7c78465434910b594da810cf1f23ad4f58b1ba85233ff805b@ec2-50-17-255-120.compute-1.amazonaws.com:5432/d5k1h6doli00sp?5432/d5k1h6doli00sp?;useSSL=false" />
+			<property name="javax.persistence.jdbc.user" value="quphvnaquwmblk" />
+			<property name="javax.persistence.jdbc.password"
+				value="cf60cafaf6d688c7c78465434910b594da810cf1f23ad4f58b1ba85233ff805b" />
+
+
+
+
+			<!-- DRIVER -->
+			<property name="javax.persistence.jdbc.driver"
+				value="org.postgresql.Driver" />
+
+			<!-- DIALECT -->
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.PostgreSQLDialect" />
+
+			<!-- PROPERTIES -->
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.c3p0.min_size" value="5" />
+			<property name="hibernate.c3p0.max_size" value="20" />
+			<property name="hibernate.c3p0.acquire_increment" value="1" />
+			<property name="hibernate.c3p0.idle_test_period"
+				value="3000" />
+			<property name="hibernate.c3p0.max_statements" value="150" />
+			<property name="hibernate.c3p0.timeout" value="1800" />
+		</properties>
+	</persistence-unit>
+</persistence>
